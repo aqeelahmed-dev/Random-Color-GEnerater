@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="color generater Favicon.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/05c7dabbb9.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script> <!-- Added script.js -->
+    <title>Random Color Generator</title>
+</head>
+
+<body>
+    <div class="title">Random Color Generator.</div>
+    <div class="subheading">Press Button to generate a new color palette.</div>
+<!-- New section for vertical lines -->
+<!-- New section for vertical lines -->
+<div class="color-lines">
+    <div class="line" style="background-color: #ff5733;">
+        <!-- Square for copy icon -->
+        <div class="icon-square copy-square"></div>
+        <i class="fa-solid fa-eye-dropper copy-icon" onclick="copyColorCode(this)"></i>
+        
+        <!-- Square for lock icon -->
+        <div class="icon-square lock-square"></div>
+        <i class="fa-solid fa-lock additional-icon" onclick="toggleLock(0, this)"></i>
+    </div>
+
+    <div class="line" style="background-color: #ff5733;">
+        <div class="icon-square copy-square"></div>
+        <i class="fa-solid fa-eye-dropper copy-icon" onclick="copyColorCode(this)"></i>
+        <div class="icon-square lock-square"></div>
+        <i class="fa-solid fa-lock additional-icon" onclick="toggleLock(1, this)"></i>
+    </div>
+
+    <!-- Repeat for other lines -->
+
+    <div class="line" style="background-color: #ff5733;">
+        <div class="icon-square copy-square"></div>
+        <i class="fa-solid fa-eye-dropper copy-icon" onclick="copyColorCode(this)"></i>
+        <div class="icon-square lock-square"></div>
+        <i class="fa-solid fa-lock additional-icon" onclick="toggleLock(4, this)"></i>
+    </div>
+
+    <div class="line" style="background-color: #ff5733;">
+        <div class="icon-square copy-square"></div>
+        <i class="fa-solid fa-eye-dropper copy-icon" onclick="copyColorCode(this)"></i>
+        <div class="icon-square lock-square"></div>
+        <i class="fa-solid fa-lock additional-icon" onclick="toggleLock(5, this)"></i>
+    </div>
+    <div class="line" style="background-color: #ff5733;">
+        <div class="icon-square copy-square"></div>
+        <i class="fa-solid fa-eye-dropper copy-icon" onclick="copyColorCode(this)"></i>
+        <div class="icon-square lock-square"></div>
+        <i class="fa-solid fa-lock additional-icon" onclick="toggleLock(4, this)"></i>
+    </div>
+
+    <div class="line" style="background-color: #ff5733;">
+        <div class="icon-square copy-square"></div>
+        <i class="fa-solid fa-eye-dropper copy-icon" onclick="copyColorCode(this)"></i>
+        <div class="icon-square lock-square"></div>
+        <i class="fa-solid fa-lock additional-icon" onclick="toggleLock(5, this)"></i>
+    </div>
+</div>
+
+
+    <!-- Button at the bottom center -->
+    <div class="generate-button">
+        <button class="generate-btn"><i class="fa-solid fa-arrow-rotate-right"></i> Generate Colors</button>
+    </div>
+</body>
+
+</html>

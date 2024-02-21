@@ -1,0 +1,136 @@
+body {
+    background: #272727;
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.title, .subheading {
+    padding: 15px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(72, 2, 201);
+}
+
+@media only screen and (max-width: 700px) {
+    .subheading {
+        font-size: 1em;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+    .line {
+        height: 550px !important;
+    }
+}
+
+/* Styles for the generate button */
+.generate-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px; /* Push to the bottom */
+    padding: 20px;
+}
+
+.generate-btn {
+    padding: 17px;
+    font-size: 20px;
+    background-color: #051fb3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 2px white;
+    
+}
+
+.generate-btn:hover {
+    background-color: #940051;
+    color: rgb(241, 241, 241);
+    border: solid 2px red;
+}
+/* New styles for color lines and copy icon */
+.color-lines {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.line {
+    position: relative; /* Added relative positioning */
+    width: 16.5%;
+    height: 650px; /* Adjust the height as needed */
+}
+
+.copy-icon {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.copy-icon:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* New styles for additional icon */
+.additional-icon {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.additional-icon:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+.icon-square {
+    opacity: 30%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #07272C;
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50px;
+    z-index: 0; /* Ensure the square is behind the icons */
+}
+
+.copy-square {
+    opacity: 30%;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #07272C;
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50px;
+    z-index: 0; 
+}
+
+@media only screen and (max-width: 700px) {
+.copy-icon, .additional-icon{
+    font-size: 1em;
+}
+.copy-square, .icon-square{
+    width: 35px;
+    height: 35px;
+}
+}
