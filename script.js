@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const generateButton = document.querySelector('.generate-btn');
+    const isMobile = window.innerWidth <= 700; // Adjust the width for mobile devices
+    const generateButton = document.querySelector('.generate-button');
     const lines = document.querySelectorAll('.line');
 
     // Initialize locked state for each line
@@ -8,19 +9,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set default colors and add lock icon on page load
     setDefaultColors();
 
-    generateButton.addEventListener('click', function() {
-        lines.forEach((line, index) => {
-            // Check if the line is not locked before changing the color
-            if (!lockedLines[index]) {
-                line.style.backgroundColor = generateRandomColor();
+    // Add event listener for space bar press on desktop
+    if (!isMobile) {
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                generateColors();
             }
         });
-    });
+    } else {
+        // Show the generate button only on mobile
+        generateButton.style.display = 'flex';
+        generateButton.addEventListener('click', function() {
+            generateColors();
+        });
+    }
 
     function setDefaultColors() {
         lines.forEach((line, index) => {
             line.style.backgroundColor = generateRandomColor();
             addLockIcon(line, index);
+        });
+    }
+
+    function generateColors() {
+        lines.forEach((line, index) => {
+            // Check if the line is not locked before changing the color
+            if (!lockedLines[index]) {
+                line.style.backgroundColor = generateRandomColor();
+            }
         });
     }
 
@@ -48,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lockIcon.style.color = newColor;
     }
 });
+
 function copyColorCode(icon) {
     const line = icon.parentElement;
     const rgbColorCode = line.style.backgroundColor;

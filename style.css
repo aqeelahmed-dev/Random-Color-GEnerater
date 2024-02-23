@@ -37,6 +37,7 @@ body {
     align-items: flex-end;
     margin-top: 10px; /* Push to the bottom */
     padding: 20px;
+    display: none; 
 }
 
 .generate-btn {
@@ -44,7 +45,6 @@ body {
     font-size: 20px;
     background-color: #051fb3;
     color: white;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     border: solid 2px white;
@@ -66,8 +66,9 @@ body {
 .line {
     position: relative; /* Added relative positioning */
     width: 16.5%;
-    height: 650px; /* Adjust the height as needed */
+    height: 83vh; /* Adjust the height as needed, this will be 15% of the viewport height */
 }
+
 
 .copy-icon {
     position: absolute;
@@ -133,4 +134,14 @@ body {
     width: 35px;
     height: 35px;
 }
+}
+
+@media only screen and (max-width: 700px) {
+    body.mobile-desktop .generate-button {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 10px; /* Push to the bottom */
+        padding: 20px;
+    }
 }
